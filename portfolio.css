@@ -71,7 +71,7 @@ section{
 .btn:hover{
     background:var(--yellow);
 }
-
+/*heading section starts*/
 .heading{
     text-align:center;
     margin: 0 6rem;
@@ -144,7 +144,7 @@ header .navigationbar ul li a{
 header .navigationbar ul li a:hover{
     background:var(--yellow);
 }
-
+/*heading section ends*/
 #menu{
     position:fixed;
     top:2rem;
@@ -159,7 +159,7 @@ header .navigationbar ul li a:hover{
 
 
 }
-
+/*home section starts*/
 .home {
     display: flex;
     justify-content: center;
@@ -190,7 +190,9 @@ header .navigationbar ul li a:hover{
     color:#eee;
     padding: 1rem 0;
 }
+/*home section ends*/
 
+/*aboutme section starts*/
 .about .row{
     display: flex;
     align-items: center;
@@ -233,6 +235,7 @@ header .navigationbar ul li a:hover{
     text-align: center;
     padding: 2rem;
     margin: 2rem;
+    box-shadow: 5px 10px;
 }
 
 .about .row .counter .box span{
@@ -253,13 +256,16 @@ header .navigationbar ul li a:hover{
        padding: 1rem 0;
        padding-left: 3rem;
 }
+/*aboutme section ends*/
 
+/*education section starts*/
 .education .box-container .box{
     width:27rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: .2rem solid #fff;
     position: relative;
+    
 }
 
 .education .box-container .box span{
@@ -298,7 +304,6 @@ header .navigationbar ul li a:hover{
 
 }
 
-
 /*hover for the link */
 .education .box-container .box .Clink{
     font-size: 1.4rem;
@@ -318,8 +323,63 @@ header .navigationbar ul li a:hover{
 }
 
  /*ends the hover css part for the link*/   
+/*education section ends*/
+
+/*skills section start*/
+
+.skills .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem 3rem 3rem 3rem; 
+}
+
+.skills .box-container .box{
+    
+    height: 10rem;
+    width: 15rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 8px;
+}
+
+.skills .box-container .box img{
+    height: 70%;
+    width:60%;
+    object-fit: cover;
+}
+
+.skills .box-container .box span{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    background:linear-gradient(to right,#eee 50%,#f9ca24 60%,#eee);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
+
+.skills .box-container .box:hover{
+    
+    transform: scale(1.4);
+}
+
+.skills .box-container .box:hover span{
+    transform: scale(1.2);
+    background-position: -100%;
+}
 
 
+
+
+
+/*skills section ends*/
 
 
 
@@ -383,6 +443,11 @@ header .navigationbar ul li a:hover{
     .about .row .counter .box {
         width: 100%;
     }
-
-   
+     
+    .education .box-container .box{
+        width: 100%;
+    }
+    .skills .box-container .box{
+        width: 100%;
+    }
 }
