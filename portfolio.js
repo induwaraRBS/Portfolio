@@ -9,5 +9,8 @@ $(window).on('scroll load',function(){
     $('header').removeclass('toggle');
 
 });
+//smooth scrolling
+
+
 
 });
