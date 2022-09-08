@@ -585,9 +585,18 @@ header .navigationbar ul li a:hover{
 
 /*contact section ends*/
 
+/*scroll to home button*/
+.top{
+    position: fixed;
+    bottom: 7.5rem;
+    right: 2rem;
+    z-index: 100;
+}
 
-
-
+.top img{
+    height: 3rem;
+    width: 3rem;
+}
 
 /* media quries */
 
