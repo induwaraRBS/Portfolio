@@ -383,6 +383,138 @@ header .navigationbar ul li a:hover{
 
 /*projects section starts*/
 
+.projects .box-container{
+    height: 50%;
+    width: 60%;
+    padding-left: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.projects .box-container .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left:-15px;
+
+
+}
+
+.projects .box-container .row .column{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.projects .box-container .row .column .effect{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.projects .box-container .row .column .effect .effect-image{
+    font-size:0 ;
+    overflow: hidden;
+}
+
+.projects .box-container .row .column .effect .effect-image img{
+    width: 100%;
+    height: auto;
+    transition: all .3s;
+}
+
+.projects .box-container .row .column .effect:hover .effect-image img{
+    transform: scale(1.2);
+}
+
+.projects .box-container .row .column .effect .effect-text{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transition: all .3s ease-in;
+    opacity: 0;
+
+}
+
+.projects .box-container .row .column .effect .effect-text .inner{
+    position: absolute;
+    padding: 15px;
+    z-index: 1;
+}
+
+.projects .box-container .row .column .effect .effect-text::before,
+.projects .box-container .row .column .effect .effect-text::after{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    content: '';
+}
+
+.projects .box-container .row .column .effect .effect-text:before{
+    border-top: 3px solid #f9ca24;
+    border-right: 3px solid #f9ca24;
+    left: -100%;
+    top: 0;
+}
+
+.projects .box-container .row .column .effect .effect-text:after{
+    border-bottom: 3px solid #f9ca24;
+    border-left: 3px solid #f9ca24;
+    left: 100%;
+    bottom: 0;
+}
+
+.projects .box-container .row .column .effect:hover .effect-text{
+    opacity: 1;
+}
+
+
+.projects .box-container .row .column .effect:hover .effect-text::after,
+.projects .box-container .row .column .effect:hover .effect-text::before{
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+.projects .box-container .row .column .effect:hover .effect-text:after{
+    animation-name: left-up;
+
+}
+
+.projects .box-container .row .column .effect:hover .effect-text:before{
+    animation-name: right-dn;
+}
+
+.projects .box-container .row .column .effect .effect-text .inner h2{
+    height: 45px;
+    color: #f9ca24;
+    font-size: 25px;
+    margin: 0;
+}
+
+.projects .box-container .row .column .effect .effect-text .inner p{
+   
+    color: #f9ca24;
+    font-size: 20px;
+    margin-bottom : 20px;
+}
+
 
 
 /*projects section ends*/
@@ -449,6 +581,8 @@ header .navigationbar ul li a:hover{
     padding-right: 1rem;
     color: var(--yellow);
 }
+
+
 /*contact section ends*/
 
 
@@ -518,5 +652,84 @@ header .navigationbar ul li a:hover{
     }
     .skills .box-container .box{
         width: 100%;
+    
+    
+    
+}
+
+
+@media (min-width:576px){
+    .projects .box-container{
+        max-width: 540px;
     }
+
+    .projects .box-container .row .column{
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width:768px){
+    .projects .box-container{
+        max-width: 720px;
+    }
+
+    .projects .box-container .row .column{
+        flex:0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+
+@media (min-width:992px){
+    .projects .box-container{
+        max-width: 960px;
+    }
+
+    .projects .box-container .row .column{
+        flex:0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+
+
+
+/*webkit keyframe*/
+
+@-webkit-keyframes left-up{
+    0%{
+        left: 100%;
+        height: 0;
+    }
+
+    50%{
+        left: 0;
+        height: 0;
+    }
+
+    100%{
+        height: 100%;
+        left: 0;
+    }
+
+}
+
+@-webkit-keyframes right-dn{
+    0%{
+        left: 100%;
+        height: 0;
+    }
+
+    50%{
+        left: 0;
+        height: 0;
+    }
+
+    100%{
+        height: 100%;
+        left: 0;
+    }
+
 }
